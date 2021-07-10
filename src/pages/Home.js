@@ -20,7 +20,6 @@ const Home = () => {
 
     apiGet(`/search/${searchOption}?q=${input}`).then(result => {
       setResults(result);
-      console.log(result);
     });
   };
 
@@ -33,7 +32,6 @@ const Home = () => {
   const onRadioChange = ev => {
     setSearchOption(ev.target.value);
   };
-  console.log(searchOption);
 
   const renderResults = () => {
     if (results && results.length === 0) {
